@@ -33,16 +33,34 @@
     display: grid;
     background-color: #C7E3A1;
     grid-template-rows: 20vw 20vw 20vw 20vw;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
 .main-element {
     background-color: #C7E3A1;
     border: 1px dotted #82C26E;
-    color: #888;
-    font-size: 300%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.inner-element {
+    color: #888;
+    font-size: 300%;
+    border: 1px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+
+.main-element:hover .inner-element {
+    color: #ddd;
+    border: 1px solid #ddd;
+    width: 240px;
+    height: 240px;
+    transition: all 0.5s ease-out;
 }
 
 .elem-1 {
@@ -135,7 +153,7 @@
     background-color: #5CB270;
     border: 2px solid #ccc;
     color: #ccc;
-    transition: all 0.7s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .elem-2:hover,
@@ -145,17 +163,37 @@
 .elem-9:hover,
 .elem-11:hover {
     transform: scale(2);
-    transition: all 0.7s ease-out;
-} 
+    transition: all 0.5s ease-out;
+}
+
+.elem-2:hover .inner-element,
+.elem-3:hover .inner-element,
+.elem-4:hover .inner-element,
+.elem-5:hover .inner-element,
+.elem-9:hover .inner-element,
+.elem-11:hover .inner-element {
+    transform: scale(0.5);
+}
 
 .elem-7:hover {
     transform: scaleX(2);
+    transition: all 0.5s ease-out;
+}
+
+.elem-7:hover .inner-element {
+    transform: scaleX(0.5);
 }
 
 .elem-8:hover,
 .elem-10:hover {
     transform: scaleY(2);
-} 
+    transition: all 0.5s ease-out;
+}
+
+.elem-8:hover .inner-element,
+.elem-10:hover .inner-element {
+    transform: scaleY(0.5);
+}
 
 .footer {
     padding-top: 40px;
